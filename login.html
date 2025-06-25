@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <style>
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: white;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(33, 51, 184, 0.4);
+            max-width: 400px;
+            width: 100%;
+            gap: 20px;
+            padding: 20px;
+            min-height: 400px;
+        }
+
+        .form-login h2{
+            text-align: center;
+            font-size:28px;
+            margin-bottom:20px;
+        }
+
+        .form-login input {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(104, 117, 124);
+            border-radius: 5px;
+            transition: border-color 0.3s;
+}
+
+        .form-login input:focus {
+            border-color: #52bff6;
+            outline: none;
+        }
+
+        .form-login button {
+            justify-content: center;
+            width: 115%;
+            height: 10%;
+            background-color: green;
+            border-radius: 5px;
+            padding: 15px;
+            color: white;
+            border: none;
+            font-size: 15px;
+        }
+        .form-login button:focus{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="form-login">
+                <h2>تسجيل الدخول</h2>
+                <label for="name"></label>
+                <input type="text" id="name" placeholder="User Name">
+
+                <label for="password"></label>
+                <input type="text" id="password" placeholder="Password">
+
+                <button type="submit">تسجيل الدخول</button>
+            </div>
+        </div>
+    </section>
+
+<script>
+    document.querySelector('button').addEventListener('click', function () {
+    const inputName = document.getElementById('name').value.trim();
+    const inputPassword = document.getElementById('password').value;
+
+    const savedName = localStorage.getItem('userFirstName'); 
+    const savedPassword = localStorage.getItem('userPassword');
+
+    if (inputName === savedName && inputPassword === savedPassword) {
+
+    window.location.href = 'view.html';
+    } else {
+        alert('الاسم أو كلمة المرور غير صحيحة');
+    }
+  });
+</script>
+</body>
+</html>
