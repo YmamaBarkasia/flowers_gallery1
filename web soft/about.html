@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>معرض اليمامة للزهور - من نحن </title>
+    <link rel="stylesheet" href="assest/css/style.css">
+</head>
+<body>
+  <!-- Start Nav  -->
+   <nav>
+        <div class="logo">
+            <img src="assest/logo/logo.png" alt="لوجو الموقع" />
+        </div>
+        <ul dir="rtl">
+            <li><a href="view.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="about.html">تعرف علينا</a></li>
+            <li><a href="cart.html">السلة</a></li>
+        </ul>
+    </nav>
+<!-- End Nav  -->
+
+
+<!-- Start About  -->
+    <section class="about">
+  <div class="about-container">
+    <div class="about-image hidden-left">
+      <img src="assest/image/96f7b296-9474-4571-87c6-f963ac6e81f5.png" alt="About Us Image">
+    </div>
+    <div class="about-content hidden-right"  dir="rtl">
+      <h2>من نحن</h2>
+      <p>نحن في معرض اليمامة للزهور نقدم لك أفضل الزهور المقطوفة حديثًا، حيث نحرص على جودة المنتجات وجمال الترتيب والتصاميم التي تلائم جميع المناسبات. سواء كنت تبحث عن باقة ورد رومانسية، أو زينة لحفل زفاف، أو هدية خاصة، فنحن نوفر لك كل ما تحتاجه بأفضل الأسعار وجودة خدمة مميزة</p>
+      <div class="social-links">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li><a href="www.facebook.com" style="color: black;">فيسبوك</a></li>
+                <li><a href="www.instagram.com" style="color: black;">إنستجرام</a></li>
+                <li><a href="www.whatsapp.com" style="color: black;">واتساب</a></li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- End About  -->
+
+
+<!-- START FOOTER  -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="assest/logo/logo.png" alt="لوجو معرض الزهور">
+        </div>
+        
+        <div class="social-links">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li><a href="www.facebook.com">فيسبوك</a></li>
+                <li><a href="www.instagram.com">إنستغرام</a></li>
+                <li><a href="www.whatsapp.com">واتساب</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2024 معرض اليمامة للزهور جميع الحقوق محفوظة</p>
+</footer>
+<!-- END FOOTER  -->
+
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const left = document.querySelector(".hidden-left");
+    const right = document.querySelector(".hidden-right");
+
+    // تأخير خفيف للتأثير الجمالي
+    setTimeout(() => {
+      left.classList.add("show");
+      right.classList.add("show");
+    }, 300);
+  });
+
+
+</script>
+<script src="assest/js/script.js"></script>
+</body>
+</html>
