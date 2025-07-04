@@ -38,8 +38,7 @@ nav ul li a {
 }
 
 
-.menu-toggle{
-    display: none;
+.menu-toggle {
     background: #a30c56;
     color: white;
     border: none;
@@ -50,15 +49,16 @@ nav ul li a {
     top: 15px;
     right: 15px; 
     z-index: 1001;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 5px;
+
+    display: none; /* يخفي الزر افتراضيًا في الشاشات الكبيرة */
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: flex; /* يظهر الزر في الشاشات الصغيرة */
+        justify-content: center;
+        align-items: center;
     }
 
     nav ul {
@@ -90,6 +90,7 @@ nav ul li a {
         font-weight: 600;
     }
 }
+
 /* End Nav */
 
 /* Section Hero */
