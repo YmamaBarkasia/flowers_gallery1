@@ -1,0 +1,494 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+
+/* Start Nav */
+nav {
+    background-color: #a30c56;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    max-width: 100%;
+    max-height: 40px;
+}
+
+nav .logo img {
+    width: 15%;
+    height: 15%;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.menu-toggle{
+    display: none;
+    background: #a30c56;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px; 
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        z-index: 999; 
+        right: 0; 
+    }
+
+    nav ul.active {
+        max-height: 300px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul li {
+        text-align: right;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav ul li a {
+        color: #a30c56; 
+        font-weight: 600;
+    }
+}
+/* End Nav */
+
+/* Section Hero */
+.hero {
+    background-image: url('../image/96f7b296-9474-4571-87c6-f963ac6e81f5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 20px; 
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+.hero a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a30c56;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero a.btn:hover {
+    background-color: #7a0840;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.zoom-in {
+    animation: zoomIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Flowers Section */
+.flowers-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.flowers-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.flowers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flower-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.flower-card:hover {
+    transform: translateY(-5px);
+}
+
+.flower-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.flower-card h3 {
+    font-size: 1.1rem;
+    margin: 0.8rem 0 0.5rem;
+    color: #2c3e50;
+}
+
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #a30c56;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #7a0840; /* ألوان متناسقة مع العنابي */
+}
+
+/* Start About */
+.about {
+  background-color: white;
+  padding: 50px 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  gap: 30px;
+}
+
+.about-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #222;
+}
+.hidden-left,
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease;
+}
+
+.hidden-left {
+  transform: translateX(-100px);
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.about-section {
+    padding: 2rem 1rem;
+    
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1 1 400px;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* تنسيق الجوال */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+}
+/* End About */
+
+/* Footer */
+footer {
+    background-color: #4b7054;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo img {
+    width: 120px;
+    height: auto;
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .footer-logo img {
+        width: 100px;
+    }
+}
+
+/* Responsive Flowers */
+@media (max-width: 600px) {
+    .flowers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .flower-card img {
+        height: 180px;
+    }
+}
+
+/*  start cart */
+.cart-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.item-details h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity {
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.total button {
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+/*  End cart */
