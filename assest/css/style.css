@@ -50,13 +50,12 @@ nav ul li a {
     right: 15px; 
     z-index: 1001;
     border-radius: 5px;
-
-    display: none; /* يخفي الزر افتراضيًا في الشاشات الكبيرة */
+    display: none; 
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex; /* يظهر الزر في الشاشات الصغيرة */
+        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -92,6 +91,7 @@ nav ul li a {
 }
 
 /* End Nav */
+
 
 /* Section Hero */
 .hero {
@@ -236,7 +236,7 @@ nav ul li a {
 }
 
 .btn:hover {
-    background-color: #7a0840; /* ألوان متناسقة مع العنابي */
+    background-color: #7a0840;
 }
 
 /* Start About */
@@ -352,7 +352,7 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-/* تنسيق الجوال */
+
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
