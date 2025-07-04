@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.createElement('button');
     menuToggle.textContent = '☰';
     menuToggle.classList.add('menu-toggle');
-
+    
     const nav = document.querySelector('nav ul');
     nav.before(menuToggle);
 
