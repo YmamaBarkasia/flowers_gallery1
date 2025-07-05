@@ -21,41 +21,92 @@
     </nav>
 <!-- End Nav  -->
 
+<!-- Categories Filter -->
+<div class="categories" dir="rtl">
+    <button class="category-btn active" data-category="all">الكل</button>
+    <button class="category-btn" data-category="طبيعي">ورد طبيعي</button>
+    <button class="category-btn" data-category="صناعي">ورد صناعي</button>
+</div>
 
 
 <!-- VIEW FLOWERS -->
 <section class="flowers-section">
     <h2>أفضل الزهور لدينا</h2>
     <div class="flowers-container">
-        <div class="flower-card">
-            <img src="assest/image/fe8fd7c5-d69a-46ef-b273-568f5f2ca366.png" alt="زهرة الورد">
-            <h3>باقة ورد أحمر</h3>
+        <div class="flower-card"  data-category="طبيعي">
+            <img src="assest/image/طبيعي1.jpg" alt=" ">
+            <h3>باقة توليب اصفر </h3>
             <p class="price">50 ليرة سورية</p>
-            <button onclick="addToCart(' ورد أحمر', ' 50  ليرة سورية' , 'assest/image/fe8fd7c5-d69a-46ef-b273-568f5f2ca366.png')" class="btn">شراء</button>
+            <button onclick="addToCart(' توليب اصفر ', ' 50  ليرة سورية' , 'assest/image/طبيعي1.jpg')" class="btn">شراء</button>
         </div>
 
-        <div class="flower-card">
-            <img src="assest/image/96f7b296-9474-4571-87c6-f963ac6e81f5.png" alt="زهرة اللافندر">
+        <div class="flower-card" data-category="طبيعي">
+            <img src="assest/image/طبيعي2.jpg" alt="توليب اصفر ">
+            <h3>باقة توليب اصفر</h3>
+            <p class="price">45 ليرة سورية</p>
+            <button onclick="addToCart(' توليب اصفر', ' 45  ليرة سورية', 'assest/image/صناعي2.png')" class="btn">شراء</button>
+
+        </div>
+
+        <div class="flower-card" data-category="طبيعي">
+            <img src="assest/image/طبيعي3.jpg" alt="جوري احمر ">
+            <h3>باقة جوري احمر</h3>
+            <p class="price">40 ليرة سورية</p>
+            <button onclick="addToCart('جوري احمر ', '40  ليرة سورية', 'assest/image/طبيعي3.jpg')" class="btn">شراء</button>
+        </div>
+
+
+         <div class="flower-card" data-category="طبيعي">
+            <img src="assest/image/طبيعي 4.png " alt="زهرة اللافندر">
             <h3>باقة لافندر</h3>
             <p class="price">45 ليرة سورية</p>
-            <button onclick="addToCart('باقة لافندر', ' 45  ليرة سورية', 'assest/image/96f7b296-9474-4571-87c6-f963ac6e81f5.png')" class="btn">شراء</button>
+            <button onclick="addToCart('باقة لافندر', ' 45  ليرة سورية', 'assest/image/طبيعي 4.png')" class="btn">شراء</button>
 
         </div>
 
-        <div class="flower-card">
-            <img src="assest/image/69bec086-5a2d-41f6-9e9c-330a36386b98.png" alt="زهرة الديزي">
+        <div class="flower-card" data-category="طبيعي">
+            <img src="assest/image/طبيعي5.png" alt="زهرة الديزي">
             <h3>باقة ديزي</h3>
             <p class="price">40 ليرة سورية</p>
-            <button onclick="addToCart('باقة ديزي', '40  ليرة سورية', 'assest/image/69bec086-5a2d-41f6-9e9c-330a36386b98.png')" class="btn">شراء</button>
+            <button onclick="addToCart('باقة ديزي', '40  ليرة سورية', 'assest/image/طبيعي5.png')" class="btn">شراء</button>
 
         </div>
 
-        <div class="flower-card">
-            <img src="assest/image/f124e1ca-a4c5-4bd0-924c-f4e81467061a.png" alt="زهرة التوليب">
-            <h3>باقة توليب</h3>
+        <div class="flower-card" data-category="صناعي">
+            <img src="assest/image/صناعي1.jpg" alt="ورد زهري وابيض">
+            <h3>باقة ورد زهري وابيض صناعي</h3>
             <p class="price">60 ليرة سورية</p>
-            <button onclick="addToCart('باقة توليب', '60  ليرة سورية', 'assest/image/f124e1ca-a4c5-4bd0-924c-f4e81467061a.png')" class="btn">شراء</button>
+            <button onclick="addToCart('ورد زهري وابيض ', '60  ليرة سورية', 'assest/image/صناعي1.jpg')" class="btn">شراء</button>
         </div>
+
+         <div class="flower-card" data-category="صناعي">
+            <img src="assest/image/صناعي2.png" alt="باقة مشكلة ">
+            <h3>باقة مشكلة صناعية</h3>
+            <p class="price">60 ليرة سورية</p>
+            <button onclick="addToCart(' باقة مشكلة ', '60  ليرة سورية', 'assest/image/صناعي2.png')" class="btn">شراء</button>
+        </div>
+
+        <div class="flower-card" data-category="صناعي">
+            <img src="assest/image/صناعي3.jpg" alt="باقة جوري صناعي">
+            <h3>باقة جوري صناعي</h3>
+            <p class="price">60 ليرة سورية</p>
+            <button onclick="addToCart(' باقة جوري صناعي', '60  ليرة سورية', 'assest/image/صناعي3.jpg')" class="btn">شراء</button>
+        </div>
+
+         <div class="flower-card" data-category="صناعي">
+            <img src="assest/image/صناعي4.jpg" alt="جوري زهر ">
+            <h3>باقة جوري زهر</h3>
+            <p class="price">60 ليرة سورية</p>
+            <button onclick="addToCart('جوري زهر ', '60  ليرة سورية', 'assest/image/صناعي4.jpg')" class="btn">شراء</button>
+        </div>
+
+         <div class="flower-card" data-category="صناعي">
+            <img src="assest/image/صناعي5.png" alt="جوري احمر ">
+            <h3>باقة جوري احمر</h3>
+            <p class="price">60 ليرة سورية</p>
+            <button onclick="addToCart('جوري احمر  ', '60  ليرة سورية', 'assest/image/صناعي5.png')" class="btn">شراء</button>
+        </div>
+        
     </div>
 </section>
 <!--END VIEW FLOWERS -->
