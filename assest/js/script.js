@@ -156,3 +156,23 @@ function updateCartBadge() {
         cartLink.appendChild(newBadge);
     }
 }
+
+document.querySelectorAll('.category-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // إزالة التفعيل السابق
+        document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const selectedCategory = button.getAttribute('data-category');
+        const cards = document.querySelectorAll('.flower-card');
+
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
