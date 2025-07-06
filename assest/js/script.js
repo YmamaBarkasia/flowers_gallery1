@@ -3,13 +3,11 @@ window.addEventListener("load", () => {
   const title = document.getElementById("animated-title");
   const paragraph = document.getElementById("animated-text");
   const btn = document.getElementById("btn");
-
-  // تفعيل تأثير الزوم على العنوان والفقرة معًا بدون تأخير زمني
   title.classList.add("zoom-in");
   paragraph.classList.add("zoom-in");
   btn.classList.add("zoom-in");
 });
-// التعامل مع قائمة التنقل المتجاوبة
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.createElement('button');
     menuToggle.textContent = '☰';
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
         nav.classList.toggle('active');
     });
 
-    // تحديث عدد المنتجات في السلة (مثال)
     const cartCount = localStorage.getItem('cartCount') || 0;
     const cartLink = document.querySelector('nav ul li:nth-child(4) a');
     if (cartCount > 0) {
@@ -94,8 +91,7 @@ function removeItem(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
-
-    // تحديث عدد العناصر في القائمة
+     
     const cartCount = cart.length;
     const badge = document.querySelector('.cart-badge');
     if (badge) badge.remove();
@@ -121,26 +117,19 @@ function checkout() {
 function addToCart(name, price, image) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // التأكد من وجود المنتج مسبقاً
     const existingItem = cart.find(item => item.name === name);
 
     if (existingItem) {
-        existingItem.quantity += 1; // زيادة الكمية إذا كان موجوداً
+        existingItem.quantity += 1;
     } else {
-        cart.push({ name, price, image, quantity: 1 }); // إضافة منتج جديد
+        cart.push({ name, price, image, quantity: 1 });
     }
-
-    // حفظ السلة في localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // تحديث عدد السلة في الشريط العلوي
     updateCartBadge();
-
-    // رسالة تأكيد
     alert(`تم إضافة "${name}" إلى السلة!`);
 }
 
-// تحديث العدد في شعار السلة
+
 function updateCartBadge() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCount = cart.length;
@@ -159,7 +148,7 @@ function updateCartBadge() {
 
 document.querySelectorAll('.category-btn').forEach(button => {
     button.addEventListener('click', () => {
-        // إزالة التفعيل السابق
+        
         document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
