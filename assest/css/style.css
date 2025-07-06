@@ -448,7 +448,6 @@ footer {
     flex-direction: column;
     gap: 20px;
 }
-
 .cart-item {
     display: flex;
     justify-content: space-between;
@@ -515,4 +514,41 @@ footer {
     cursor: pointer;
     margin-top: 15px;
 }
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+    }
+
+    .cart-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .item-details {
+        margin: 0;
+        width: 100%;
+    }
+
+    .item-details h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .item-controls {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .remove-btn {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
 /*  End cart */
